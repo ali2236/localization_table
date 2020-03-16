@@ -13,10 +13,15 @@ class LocalizationTableDelegate
   LocalizationTableDelegate(this.assetPath, {this.supportedLocals});
 
   @override
-  bool isSupported(Locale locale) =>
-      supportedLocals != null ? supportedLocals.contains(locale) : true;
+  bool isSupported(Locale locale) {
+    if (supportedLocals != null) {
+      return supportedLocals.contains(locale);
+    } else {
+      return true;
+    }
+  }
 
-  Future<void> init() async{
+  Future<void> init() async {
     final csvString = await rootBundle.loadString(assetPath);
     final converter = CsvToListConverter();
     final valueTable = converter.convert(csvString);
@@ -25,10 +30,8 @@ class LocalizationTableDelegate
   }
 
   @override
-  Future<LocalizationTable> load(Locale locale) async{
-    if(_table==null){
-      await init();
-    }
+  Future<LocalizationTable> load(Locale locale) async {
+    if (_table == null) await init();
     return LocalizationTable(_table.getTranslations(locale));
   }
 
