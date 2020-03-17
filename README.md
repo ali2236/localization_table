@@ -1,10 +1,10 @@
 # localization_table
 
-Localize you app using tables
+Localize you app using a localization table.
 
 ## How to use
 
-1. Create your table file with `.csv` format.
+1. Create your table file with the `.csv` format.
 
 2. Put your supported languages in the first row, starting from the second cell.
 
@@ -37,7 +37,7 @@ MaterialApp(
 6. Use directly with `LocalizationTable.of(context).get(key)` where key is the string key of the value you want.  
 
 
-### using the extension method
+### Using the extension method
 
 For ease of use there is a built in extension method that can be used in flutter projects that use dart 2.7.0 or higher.
 

@@ -1,7 +1,7 @@
 name: localization_table
-description: A new Flutter package.
-version: 0.0.1
-homepage:
+description: Localize you app the easy way using a localization table.
+version: 0.1.0
+homepage: https://github.com/ali2236/localization_table
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
