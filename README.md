@@ -14,7 +14,7 @@ Localize you app using tables
 
 Example Table:
 
-[](table.PNG)
+![](table.PNG)
 
 5. Add the LocalizationTableDelegate to your locale delegates.
 
