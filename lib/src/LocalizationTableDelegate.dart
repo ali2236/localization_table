@@ -36,7 +36,5 @@ class LocalizationTableDelegate
   }
 
   @override
-  bool shouldReload(LocalizationsDelegate old) {
-    return false;
-  }
+  bool shouldReload(LocalizationsDelegate old) => false;
 }
