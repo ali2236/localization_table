@@ -1,6 +1,6 @@
 name: localization_table
 description: Localize you app the easy way using a localization table.
-version: 0.1.1
+version: 0.1.2
 homepage: https://github.com/ali2236/localization_table
 
 environment:

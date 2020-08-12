@@ -24,7 +24,7 @@ class CSVTable {
         if(table[i].first!=null){
           assert((){
             print('table row with key=${table[i].first} had an exception');
-            return false;
+            return true;
           }());
         }
       }
