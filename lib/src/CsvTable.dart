@@ -15,10 +15,19 @@ class CSVTable {
     var translations = <String, String>{};
 
     for (int i = 1; i < table.length; i++) {
-      var key = table[i].first;
-      var languageValue = table[i][languageIndex];
-      var defaultValue = table[i][defaultLanguageIndex];
-      translations.addAll({key: languageValue ?? defaultValue});
+      try {
+        var key = table[i].first;
+        var languageValue = table[i][languageIndex];
+        var defaultValue = table[i][defaultLanguageIndex];
+        translations.addAll({key: languageValue ?? defaultValue});
+      } catch (e){
+        if(table[i].first!=null){
+          assert((){
+            print('table row with key=${table[i].first} had an exception');
+            return false;
+          }());
+        }
+      }
     }
 
     return translations;
