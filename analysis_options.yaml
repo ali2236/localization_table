@@ -1,0 +1,11 @@
+
+include: package:pedantic/analysis_options.yaml
+
+analyzer:
+  enable-experiment:
+    - non-nullable
+
+linter:
+  rules:
+    invalid_use_of_protected_member: false
+    invalid_use_of_visible_for_testing_member: false

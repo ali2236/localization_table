@@ -6,7 +6,7 @@ class LocalizationTable {
   LocalizationTable(this.translations);
 
   static LocalizationTable of(BuildContext context) {
-    return Localizations.of<LocalizationTable>(context, LocalizationTable);
+    return Localizations.of<LocalizationTable>(context, LocalizationTable)!;
   }
 
   String get(String key) {
@@ -14,7 +14,8 @@ class LocalizationTable {
     if (value != null) {
       return value;
     } else {
-      throw 'transelation for key($key) not fount!';
+      print('translation for key($key) not fount!');
+      return key;
     }
   }
 }
